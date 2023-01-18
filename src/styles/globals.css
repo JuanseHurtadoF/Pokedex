@@ -1,5 +1,15 @@
 :root {
-  --font: 'Poppins', sans-serif;
+  /* fonts */
+  --font:  'Inter', sans-serif;
+
+  /* colors */
+  --black: #000;
+  --white: #f1f1f1;
+  --red: #FF0000;
+  --red-dark: #CC0000;
+  --blue: #3B4CCA;
+  --yellow: #FFDE00;
+  --gold: #B3A125;
 }
 
 * {
@@ -12,5 +22,5 @@ html,
 body {
   font-size: 62.5%;
   font-family: var(--font);
-  color: #000;
+  color: var(--black);
 }

@@ -1,4 +1,32 @@
 .container {
-    min-height: 100vh;
-    background-color: red;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      rgb(36, 36, 36, 0.6),
+      rgba(36, 36, 36, 0.6)
+    ),
+    url("/assets/background/landscape.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  place-items: center;
+
+  .titleContainer {
+    text-align: center;
+    padding: 2rem;
+    width: min(600px, 100%);
+
+    .logo {
+      width: 80%;
+      min-width: 30rem;
+      max-width: 46rem;
+      margin-bottom: 4rem;
+    }
+
+    .title {
+        margin-bottom: 2.4rem;
+    }
+  }
 }
