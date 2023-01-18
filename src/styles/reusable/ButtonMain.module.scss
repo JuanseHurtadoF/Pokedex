@@ -1,0 +1,23 @@
+.link {
+  text-decoration: none;
+}
+
+.button {
+  background-color: #e67e22;
+  padding: 1.2rem 3.6rem;
+  width: max-content;
+  border-radius: 0.8rem;
+  box-shadow: 0 -1px 33px -10px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 0 -1px 33px -10px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 0 -1px 33px -10px rgba(0, 0, 0, 0.69);
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #cf711f;
+    scale: 1.005;
+  }
+
+  &:active {
+      scale: 1;
+  }
+}

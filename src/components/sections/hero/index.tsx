@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { ButtonMain } from "@/components";
 import styles from "@styles/sections/Hero.module.scss";
 import typography from "@styles/typography/typography.module.scss";
 
@@ -11,10 +12,15 @@ const Hero = () => {
           src="/assets/brand/logo.png"
           className={styles.logo}
         ></img>
-        <h1 className={`${styles.title} ${typography.headingPrimary}`}>A modern-day Pokedex</h1>
+        <h1 className={`${styles.title} ${typography.headingPrimary}`}>
+          A modern-day Pokedex
+        </h1>
         <p className={typography.textPrimary}>
           {`Record every Pokemon's sighting and stats. May the odds be in your favor on your quest to catch 'em all!`}
         </p>
+        <div className={styles.buttonContainer}>
+          <ButtonMain text="Catch'em All" linkTo="/pokedex"/>
+        </div>
       </div>
     </div>
   );
