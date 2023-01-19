@@ -19,7 +19,7 @@ const Hero = () => {
           {`Record every Pokemon's sighting and stats. May the odds be in your favor on your quest to catch 'em all!`}
         </p>
         <div className={styles.buttonContainer}>
-          <ButtonMain text="Catch'em All" linkTo="/pokedex"/>
+          <ButtonMain text="Catch'em All" linkTo="/app/pokedex"/>
         </div>
       </div>
     </div>

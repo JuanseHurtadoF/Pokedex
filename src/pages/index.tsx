@@ -1,8 +1,9 @@
 import styles from "@/styles/Home.module.scss";
 import { Hero } from "@/components";
 import Head from "next/head";
+import { NextPage } from "next";
 
-export default function Home() {
+const Home : NextPage = () => {
   return (
     <>
       <Head>
@@ -14,3 +15,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
