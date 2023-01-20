@@ -3,7 +3,7 @@ import { Hero, Nav } from "@/components";
 import Head from "next/head";
 import { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Home : NextPage = () => {
   return (
     <>
       <Head>
@@ -15,6 +15,6 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default Home;
