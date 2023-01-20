@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import { FunctionComponent } from "react";
 import { ButtonMain } from "@/components";
 import styles from "@styles/sections/Hero.module.scss";
 import typography from "@styles/typography/typography.module.scss";
 
-const Hero = () => {
+const Hero: FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
