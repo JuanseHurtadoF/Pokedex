@@ -1,8 +1,8 @@
+import { FunctionComponent } from "react";
+import { button } from "@/types";
+import Link from "next/link";
 import styles from "@styles/reusable/ButtonMain.module.scss";
 import typography from "@styles/typography/typography.module.scss";
-import { button } from "@/types/button/button";
-import { FunctionComponent } from "react";
-import Link from "next/link";
 
 const ButtonMain: FunctionComponent<button> = ({ text, linkTo }) => {
   return (
