@@ -20,9 +20,7 @@ export default async function handler(
       image: poke.sprites.other.dream_world.front_default,
       stats: getStats(poke.stats),
     };
-
     return res.status(200).json(pokemonInfo);
-
   } catch (e) {
 
     console.log(e);
