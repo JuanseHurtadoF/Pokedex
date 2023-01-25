@@ -25,8 +25,12 @@
       "@types/*": ["./src/types/*"],
       "@utils": ["./src/utils"],
       "@utils/*": ["./src/utils/*"],
+      "@actions": ["./src/store/actions"],
+      "@actions/*": ["./src/store/actions/*"],
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/store/index.ts"],
   "exclude": ["node_modules"]
 }
