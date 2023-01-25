@@ -1,10 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { ButtonMain } from "@/components";
 import styles from "@styles/sections/Hero.module.scss";
 import typography from "@styles/typography/typography.module.scss";
+import { useSelector } from "react-redux";
 
 const Hero: FunctionComponent = () => {
+
+  const name = useSelector((state: any) => state.name)
+
+  useEffect(() => {
+    console.log(name)
+  }, [name])
+
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
