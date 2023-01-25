@@ -1,6 +1,7 @@
+import { PokemonInfo } from "@/types";
 import { PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState: PokemonInfo = {
   name: "Juanse",
   id: 1,
   image: "image",

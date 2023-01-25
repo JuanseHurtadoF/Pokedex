@@ -5,5 +5,5 @@ export type PokemonInfo = {
   id: number;
   image: string;
   types: string[];
-  stats: Stats;
+  stats: Stats[];
 };
