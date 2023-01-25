@@ -3,15 +3,17 @@ import { FunctionComponent, useEffect } from "react";
 import { ButtonMain } from "@/components";
 import styles from "@styles/sections/Hero.module.scss";
 import typography from "@styles/typography/typography.module.scss";
-import { useSelector } from "react-redux";
+import { changeName } from "@actions/index";
+import { useAppSelector, useAppDispatch } from "@/hooks";
 
 const Hero: FunctionComponent = () => {
-
-  const name = useSelector((state: any) => state.name)
+  const name = useAppSelector((state: any) => state.name);
 
   useEffect(() => {
-    console.log(name)
-  }, [name])
+    console.log(name);
+  }, [name]);
+
+  const dispatch = useAppDispatch();
 
   return (
     <div className={styles.container}>
@@ -21,14 +23,19 @@ const Hero: FunctionComponent = () => {
           src="/assets/brand/logo.png"
           className={styles.logo}
         ></img>
-        <h1 className={`${styles.title} ${typography.headingPrimary}`}>
+        <h1
+          onClick={() => {
+            dispatch(changeName('Gaby'))
+          }}
+          className={`${styles.title} ${typography.headingPrimary}`}
+        >
           A modern-day Pokedex
         </h1>
         <p className={typography.textPrimary}>
           {`Record every Pokemon's sighting and stats. May the odds be in your favor on your quest to catch 'em all!`}
         </p>
         <div className={styles.buttonContainer}>
-          <ButtonMain text="Catch'em All" linkTo="/app/pokedex"/>
+          <ButtonMain text="Catch'em All" linkTo="/app/pokedex" />
         </div>
       </div>
     </div>
