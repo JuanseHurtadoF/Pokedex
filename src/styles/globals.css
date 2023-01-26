@@ -10,6 +10,19 @@
   --blue: #3B4CCA;
   --yellow: #FFDE00;
   --gold: #B3A125;
+
+  /* type colors */
+  --fire: #F57D31;
+  --grass: #74CB48;
+  --poison: #A43E9E;
+  --water: #6493EB;
+  --electric: #F9CF30;
+  --bug: #A7B723;
+  --ghost: #70559B;
+  --normal: #AAA67F;
+  --psychic: #FB5584;
+  --steel: #B7B9D0;
+  --rock: #B69E31;
 }
 
 * {

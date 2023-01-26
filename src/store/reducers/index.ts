@@ -1,39 +1,40 @@
-import { PokemonInfo } from "@/types";
-import { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "..";
 
-const initialState: PokemonInfo = {
-  name: "Juanse",
-  id: 1,
-  image: "image",
-  types: ["fire", "rock"],
-  stats: [
+export interface PokemonState {
+  name: string;
+  types: string[];
+  image: string;
+}
+
+const initialState: any = {
+  allPokemon: [
     {
-      name: "hp",
-      value: 50,
-    },
-    {
-      name: "defense",
-      value: 55,
-    },
-    {
-      name: "attack",
-      value: 70,
+      name: "Juanse",
+      types: ["fire", "water"],
+      image:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
     },
   ],
 };
 
-export default function reducer(
-  state = initialState,
-  action: PayloadAction<string>
-) {
-  switch (action.type) {
-    case "CHANGE_NAME":
-      return {
-        ...state,
-        name: action.payload,
-      };
+export const pokemonSlice = createSlice({
+  name: "pokemon",
+  initialState,
+  reducers: {
+    changeName: (state, action: PayloadAction<string>) => {
+      state[0].name = action.payload;
+    },
+    changeTypes: (state) => {
+      state[0].types = ["poison", "rock"];
+    },
+    loadPokemon: (state, action: PayloadAction<any>) => {
+      state.allPokemon = action.payload
+    },
+  },
+});
 
-    default:
-      return state;
-  }
-}
+export const { changeName, changeTypes, loadPokemon } = pokemonSlice.actions;
+
+export default pokemonSlice.reducer;

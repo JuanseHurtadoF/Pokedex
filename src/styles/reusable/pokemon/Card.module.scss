@@ -1,0 +1,39 @@
+.container {
+  width: min(20rem, 100%);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 4rem;
+  
+  &:hover {
+    scale: 1.05;
+  }
+
+  .imgContainer {
+    background-image: url("/assets/background/pokemon-background.png");
+    background-position: center;
+    background-size: cover;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+
+    .img {
+        width: 60%;
+    }
+  }
+
+  .infoContainer {
+    padding: 2.4rem;
+    display: grid;
+    justify-items: center;
+    gap: 1.2rem;
+
+    .tagContainer {
+      display: flex;
+      gap: 0.8rem;
+    }
+  }
+
+}

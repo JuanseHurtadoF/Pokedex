@@ -1,0 +1,36 @@
+.tag {
+    // background-color: 
+    padding: 0.2rem 0.6rem;
+    width: max-content;
+
+    &[data--type="fire"] {
+        background-color: var(--fire); 
+    }
+    &[data--type="water"] {
+        background-color: var(--water); 
+    }
+    &[data--type="poison"] {
+        background-color: var(--poison); 
+    }
+    &[data--type="electric"] {
+        background-color: var(--electric); 
+    }
+    &[data--type="bug"] {
+        background-color: var(--bug); 
+    }
+    &[data--type="normal"] {
+        background-color: var(--normal); 
+    }
+    &[data--type="psychic"] {
+        background-color: var(--psychic); 
+    }
+    &[data--type="steel"] {
+        background-color: var(--steel); 
+    }
+    &[data--type="ghost"] {
+        background-color: var(--ghost); 
+    }
+    &[data--type="rock"] {
+        background-color: var(--rock); 
+    }
+ }
