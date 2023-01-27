@@ -9,14 +9,7 @@ export interface PokemonState {
 }
 
 const initialState: any = {
-  allPokemon: [
-    {
-      name: "Juanse",
-      types: ["fire", "water"],
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
-    },
-  ],
+  allPokemon: [],
 };
 
 export const pokemonSlice = createSlice({

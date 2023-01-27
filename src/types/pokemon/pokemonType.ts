@@ -8,4 +8,4 @@ export type PokemonType =
   | "normal"
   | "psychic"
   | "steel"
-  | "rock";
+  | "ground";
