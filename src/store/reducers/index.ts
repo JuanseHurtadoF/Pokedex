@@ -10,6 +10,7 @@ export interface PokemonState {
 
 const initialState: any = {
   allPokemon: [],
+  filteredPokemon: []
 };
 
 export const pokemonSlice = createSlice({
@@ -24,6 +25,7 @@ export const pokemonSlice = createSlice({
     },
     loadPokemon: (state, action: PayloadAction<any>) => {
       state.allPokemon = action.payload
+      state.filteredPokemon = action.payload
     },
   },
 });

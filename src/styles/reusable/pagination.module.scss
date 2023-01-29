@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-inline: auto;
+
+  margin-top: 3.2rem;
+
+  .arrow {
+    background-color: transparent;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    transition: all 0.3s;
+    display: grid;
+    place-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--blue);
+        color: var(--white);
+        svg path {
+            transition: all 0.3s;
+            fill: var(--white);
+        }
+    }
+
+    &Hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .numberButton {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--blue);
+        color: var(--white);
+    }
+  }
+}

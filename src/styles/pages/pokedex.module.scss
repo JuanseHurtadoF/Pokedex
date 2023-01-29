@@ -1,8 +1,16 @@
-.pokemonContainer {
+
+.pokedexLayout {
+    display: grid;
+    grid-template-columns: 20fr 80fr;
     margin-top: 6.4rem;
+}
+
+.pokemonContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: min(100%, 900px);
     gap: 3.2rem;
     margin-inline: auto;
+
+    min-height: 56.5rem;
 }
