@@ -1,41 +1,86 @@
 .headingPrimary {
-    font-family: var(--font);
-    color: var(--white);
-    font-size: 4.2rem;
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 4.2rem;
 }
 
 .textPrimary {
-    font-family: var(--font);
-    color: var(--white);
-    font-size: 2rem;
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 2rem;
 }
 
 .buttonPrimary {
-    font-family: var(--font);
-    color: var(--white);
-    font-size: 2.4rem;
-    font-weight: 600;
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 .navLink {
-    font-family: var(--font);
-    color: var(--black);
-    font-size: 1.6rem;
-    font-weight: 400;
-} 
+  font-family: var(--font);
+  color: var(--black);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
 
 .pokemonName {
-    font-family: var(--font);
-    color: var(--black);
-    font-size: 2rem;
-    font-weight: 600;
+  font-family: var(--font);
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .typeTag {
-    font-family: var(--font);
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-radius: 0.4rem;
-    font-weight: 600;
+  font-family: var(--font);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  padding: 0.2rem 0.6rem;
+
+  letter-spacing: 0.05rem;
+
+  &[data--type="fire"] {
+    background-color: var(--fire);
+  }
+  &[data--type="water"] {
+    background-color: var(--water);
+  }
+  &[data--type="grass"] {
+    background-color: var(--grass);
+  }
+  &[data--type="poison"] {
+    background-color: var(--poison);
+  }
+  &[data--type="electric"] {
+    background-color: var(--electric);
+  }
+  &[data--type="flying"] {
+    background-color: var(--flying);
+  }
+  &[data--type="bug"] {
+    background-color: var(--bug);
+  }
+  &[data--type="normal"] {
+    background-color: var(--normal);
+  }
+  &[data--type="psychic"] {
+    background-color: var(--psychic);
+  }
+  &[data--type="steel"] {
+    background-color: var(--steel);
+  }
+  &[data--type="ghost"] {
+    background-color: var(--ghost);
+  }
+  &[data--type="ground"] {
+    background-color: var(--rock);
+  }
+  &[data--type="flying"] {
+    background-color: var(--flying);
+  }
 }

@@ -8,14 +8,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { loadPokemon } from "@/store/reducers";
 import Pagination from "@/components/reusable/pagination";
+import { PokemonInfo } from "@/types";
 // import { PokemonInfo } from "@/types";
 
 const Pokedex: NextPage = () => {
   const allPokemon = useSelector(
-    (state: RootState) => state.pokemon.allPokemon
+    (state: RootState) => state.pokemon.filteredPokemon
   );
+
   const [loading, setLoading] = useState<boolean | null>(null);
-  const [shownPokemon, setShownPokemon] = useState<any>([]);
+  const [shownPokemon, setShownPokemon] = useState<PokemonInfo[]>([]);
   const [page, setPage] = useState<number>(1);
 
   const dispatch = useDispatch();
@@ -50,16 +52,14 @@ const Pokedex: NextPage = () => {
       <div className={styles.pokedexLayout}>
         <Panel />
         <div>
-          <div>
-            <div className={styles.pokemonContainer}>
-              {loading && <p>Loading</p>}
+          <div className={styles.pokemonContainer}>
+            {loading && <p>Loading</p>}
 
-              {!loading &&
-                shownPokemon &&
-                shownPokemon.map((item: any) => {
-                  return <Card key={item.name} pokemon={item} />;
-                })}
-            </div>
+            {!loading &&
+              shownPokemon &&
+              shownPokemon.map((item: any) => {
+                return <Card key={item.name} pokemon={item} />;
+              })}
           </div>
           <Pagination currentPage={page} changePage={changePage} />
         </div>

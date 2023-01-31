@@ -9,10 +9,11 @@ type Props = {
 };
 
 const Pagination: FunctionComponent<Props> = ({ currentPage, changePage }) => {
-  const allPokemon = useSelector(
+  const filteredPokemon = useSelector(
     (state: RootState) => state.pokemon.filteredPokemon
   );
-  const numberOfPages = Math.ceil(allPokemon.length / 8);
+
+  const numberOfPages = Math.ceil(filteredPokemon.length / 8);
   let pagesArray: number[] = [];
   for (let i = 1; i <= numberOfPages; i++) {
     pagesArray.push(i);

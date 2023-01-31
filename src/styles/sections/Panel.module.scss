@@ -1,4 +1,36 @@
 .container {
-    padding: 3.2rem;
-    // background-color: red;
+  padding: 3.2rem;
+  background-color: #f1f1f1;
+  padding-top: var(--padding-top-lg);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.searchBarContainer {
+  .searchBar {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--blue);
+    border-radius: 1rem;
+  }
+}
+.typesContainer {
+  margin-top: 3.2rem;
+  .checkBoxContainer {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    flex-grow: 1;
+    gap: 1rem;
+    row-gap: 1.5rem;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + label {
+      transition: all 0.1s ease-out;
+      outline: 2px solid var(--black);
+    }
+  }
 }

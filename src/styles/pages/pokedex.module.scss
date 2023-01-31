@@ -1,8 +1,7 @@
 
 .pokedexLayout {
     display: grid;
-    grid-template-columns: 20fr 80fr;
-    margin-top: 6.4rem;
+    grid-template-columns: 25fr 75fr;
 }
 
 .pokemonContainer {
@@ -11,6 +10,6 @@
     width: min(100%, 900px);
     gap: 3.2rem;
     margin-inline: auto;
-
-    min-height: 56.5rem;
+    padding-top: var(--padding-top-lg);
+    min-height: 57rem;
 }

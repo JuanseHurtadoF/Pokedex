@@ -1,11 +1,14 @@
 export type PokemonType =
   | "fire"
-  | "water"
+  | "grass"
   | "poison"
+  | "water"
   | "electric"
   | "bug"
   | "ghost"
   | "normal"
   | "psychic"
   | "steel"
+  | "rock"
+  | "flying"
   | "ground";

@@ -24,6 +24,10 @@
   --steel: #B7B9D0;
   --rock: #B69E31;
   --flying: #A98FF3;
+
+  /* Spacing & Height */
+  --nav-height: 7.8rem;
+  --padding-top-lg: 5.6rem;
 }
 
 * {
