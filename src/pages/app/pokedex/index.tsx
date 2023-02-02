@@ -39,6 +39,7 @@ const Pokedex: NextPage = () => {
 
   useEffect(() => {
     setShownPokemon(allPokemon.slice(0, 8));
+    setPage(1);
   }, [allPokemon]);
 
   useEffect(() => {
