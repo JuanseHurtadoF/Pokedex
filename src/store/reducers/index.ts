@@ -34,6 +34,10 @@ export const pokemonSlice = createSlice({
     filterPokemon: (state, action: PayloadAction<PokemonType[]>) => {
       const toFilter = current(state.allPokemon);
       let filtered: PokemonInfo[] = [];
+      if (action.payload.length <= 0) {
+        state.filteredPokemon = toFilter;
+        return
+      }
       action.payload.forEach((item: PokemonType) => {
         filtered = [
           ...filtered,
