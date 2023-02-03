@@ -5,6 +5,7 @@ import { searchPokemon, filterPokemon } from "@/store/reducers";
 import { CheckBox } from "@/components";
 import { pokemonTypes } from "@/lib/constants";
 import styles from "@styles/sections/Panel.module.scss";
+import typography from "@styles/typography/typography.module.scss"
 import { PokemonType } from "@/types";
 import { removeFromArray } from "@/utils";
 
@@ -55,7 +56,7 @@ const Panel: FunctionComponent = () => {
 
       {/* Type filter */}
       <div className={styles.typesContainer}>
-        <p>Filter by type:</p>
+        <p className={typography.panelText}>Filter by type:</p>
         <div className={styles.checkBoxContainer}>
           {pokemonTypes.map((type: PokemonType) => {
             return (
